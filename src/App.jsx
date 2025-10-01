@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from './Components/NavBar';
 import Header from './Components/Header';
 import FAQ from './Components/FAQ';
@@ -10,10 +11,16 @@ import './App.css'
 
 export default function App() {
 
+  const [openModal, setOpenModal] = useState(false);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  }
+
   return (
     <>
-      <h1>Clinica Holística - Roberto Watanabe</h1>
-      {/* <Navbar /> */}
+      <Navbar onToggleTheme={toggleTheme} onOpenModal={() => setOpenModal(true)}/>
       {/* <Header /> */}
       {/* <Sobre /> */}
       {/* <Terapias /> */}

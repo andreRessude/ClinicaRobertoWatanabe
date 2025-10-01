@@ -1,0 +1,142 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(45, 71, 46, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(196, 155, 51, 0.2);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.container {
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoImg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.logoText {
+  color: #c49b33;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.links {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .links {
+    display: flex;
+  }
+}
+
+.link {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.link:hover {
+  color: #c49b33;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  width: 0;
+  height: 0.125rem;
+  background-color: #c49b33;
+  transition: all 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.buttonAgendar {
+  background-color: #c49b33;
+  color: white;
+  padding: 0.6em 1.5em;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.buttonAgendar:hover {
+  background-color: rgba(196, 155, 51, 0.8);
+  transform: scale(1.05);
+}
+
+
+.themeToggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background: #ddd;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.themeToggle::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateX(0);
+}
+
+:root[data-theme="dark"] .themeToggle {
+  background: #A67924;
+  border-color: #A67924;
+}
+
+:root[data-theme="dark"] .themeToggle::before {
+  transform: translateX(28px);
+}
+
+.sunIcon, .moonIcon {
+  width: 16px;
+  height: 16px;
+  transition: opacity 0.3s ease;
+  color: #A67924; 
+}
