@@ -12,9 +12,8 @@ export default function App() {
 
   return (
     <>
-      <h1>Clinica Holística - Roberto Watanabe</h1>
-      {/* <Navbar /> */}
-      {/* <Header /> */}
+      <Navbar />
+      <Header />
       {/* <Sobre /> */}
       {/* <Terapias /> */}
       {/* <FAQ /> */}
