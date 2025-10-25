@@ -1,14 +1,15 @@
 .navbar {
   width: 100%;
-  background: #243b2a; /* verde escuro */
+  background: #243b2a;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 24px 0;
   position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
-/* LOGO */
 .containerLogo {
   display: flex;
   align-items: center;
@@ -23,10 +24,9 @@
 .textLogo {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: #d9b43a; /* dourado */
+  color: #d9b43a;
 }
 
-/* MENU */
 .menu {
   display: flex;
   align-items: center;
@@ -44,7 +44,6 @@
   color: #d9b43a;
 }
 
-/* BOTÃO AGENDA */
 .btnAgendar {
   background: #d9b43a;
   color: #243b2a;
@@ -60,7 +59,7 @@
   transform: scale(1.05);
 }
 
-/* RESPONSIVO
+/*
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
