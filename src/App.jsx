@@ -17,7 +17,7 @@ export default function App() {
       <Sobre />
       {/* <Terapias /> */}
       {/* <FAQ /> */}
-      {/* <Contato /> */}
+      <Contato />
       <Footer />
       {/* <ModalAgendamento /> */}
     </>
