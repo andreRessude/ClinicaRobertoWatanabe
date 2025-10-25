@@ -3,7 +3,9 @@ import styles from './style.module.css';
 export default function Footer() {
   return (
     <>
-      <h1 className={styles.titulo}>Footer</h1>
+      <div className={styles.footer}>
+        <p className={styles.textFooter}>© 2025 Roberto Watanabe. Todos os direitos reservados.</p>
+      </div>
     </>
   );
 }
