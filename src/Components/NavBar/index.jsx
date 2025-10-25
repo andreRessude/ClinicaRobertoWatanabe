@@ -3,7 +3,6 @@ import styles from './style.module.css';
 
 export default function Navbar() {
   return (
-    <>
     <nav className={styles.navbar}>
       <div className={styles.containerLogo}>
         <img className={styles.imgLogo} src={imgLogo} alt="Logo" />
@@ -24,6 +23,5 @@ export default function Navbar() {
         <button className={styles.btnAgendar}>Agendar</button>
       </nav>
     </nav>
-    </>
   );
 }

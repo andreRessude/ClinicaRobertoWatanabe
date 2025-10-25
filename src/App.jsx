@@ -14,7 +14,7 @@ export default function App() {
     <>
       <Navbar />
       <Header />
-      {/* <Sobre /> */}
+      <Sobre />
       {/* <Terapias /> */}
       {/* <FAQ /> */}
       {/* <Contato /> */}
